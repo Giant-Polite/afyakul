@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [wallet, setWallet] = useState<string | null>(null);
@@ -63,9 +64,12 @@ export default function Home() {
           Afyakul is designed for ethical and inclusive growth. Experience a community-led system that protects what matters most.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <button className="bg-emerald-500 text-slate-900 px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform uppercase text-sm">
+          <Link 
+            href="/login" 
+            className="bg-emerald-500 text-slate-900 px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform uppercase text-sm block w-fit text-center"
+          >
             Login / Register Dashboard
-          </button>
+          </Link>
           <button className="border border-slate-700 text-white px-10 py-4 rounded-full font-bold hover:bg-slate-900 transition-all uppercase text-sm">
             Join DAO Platform
           </button>
