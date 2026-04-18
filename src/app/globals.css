@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 2, 6, 23; 
+  --background-end-rgb: 15, 23, 42;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* Change 'to b' to 'to bottom' below */
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  @apply transition-all duration-200 active:scale-95;
+}
+
+/* Add this to your globals.css */
+.fintech-card {
+  @apply bg-slate-900/50 border border-slate-800 backdrop-blur-md rounded-2xl p-6 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-[0_0_30px_-10px_rgba(16,185,129,0.2)];
+}
